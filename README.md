@@ -1,66 +1,82 @@
-# 🌸 Iris Flower Classification using Decision Tree
+# 🌸 Iris Flower Classification using Machine Learning
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange.svg)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red.svg)
 ![Status](https://img.shields.io/badge/Status-Completed-success.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-## 📌 Project Overview
+---
 
-This project implements a Machine Learning model to classify Iris flowers into three different species:
+# 📌 Project Overview
+
+The Iris Flower Classification project is a Machine Learning application that predicts the species of an Iris flower based on its physical measurements.
+
+The model is trained using the famous Iris dataset from Scikit-Learn and classifies flowers into the following categories:
 
 - Setosa
 - Versicolor
 - Virginica
 
-The model is trained using the famous Iris Dataset from Scikit-Learn and demonstrates the complete Machine Learning workflow from data preprocessing to model deployment.
+This project demonstrates the complete Machine Learning lifecycle, including:
+
+✅ Data Collection  
+✅ Data Exploration  
+✅ Data Visualization  
+✅ Data Preprocessing  
+✅ Model Training  
+✅ Model Evaluation  
+✅ Model Serialization (Pickle)  
+✅ Streamlit Deployment
 
 ---
 
+# 🌐 Live Demo
+
+🚀 **Try the Application Here**
+
+https://mhm8lmnoncnkfyxvodpmis.streamlit.app/
+
+The web application allows users to enter flower measurements and instantly predict the Iris flower species using the trained Machine Learning model.
+
 ---
-## 🌐 Live Demo
 
-🔗 **Streamlit App:** https://mhm8lmnoncnkfyxvodpmis.streamlit.app/
-
-Explore the live application to predict Iris flower species based on sepal and petal measurements using the trained Decision Tree model.
-
----
-
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```text
 Iris-Flower-Classification/
 │
-├── Iris.ipynb
-├── iris.pkl
-├── README.md
-└── requirements.txt
+├── Iris.ipynb              # Jupyter Notebook containing complete workflow
+├── iris.pkl                # Trained Machine Learning model
+├── README.md               # Project Documentation
+├── requirements.txt        # Required dependencies
+└── app.py                  # Streamlit Application
 ```
 
 ---
 
-## 📊 Dataset Information
+# 📊 Dataset Information
 
-The Iris dataset contains 150 observations and 4 features.
+The Iris dataset contains 150 flower samples and 4 numerical features.
 
 | Feature | Description |
 |----------|------------|
-| Sepal Length | Length of sepal (cm) |
-| Sepal Width | Width of sepal (cm) |
-| Petal Length | Length of petal (cm) |
-| Petal Width | Width of petal (cm) |
+| Sepal Length | Length of sepal in cm |
+| Sepal Width | Width of sepal in cm |
+| Petal Length | Length of petal in cm |
+| Petal Width | Width of petal in cm |
 
 ### Target Classes
 
-| Class | Species |
-|---------|----------|
+| Label | Species |
+|--------|----------|
 | 0 | Setosa |
 | 1 | Versicolor |
 | 2 | Virginica |
 
 ---
 
-## 🛠 Technologies Used
+# 🛠️ Technologies Used
 
 - Python
 - NumPy
@@ -69,29 +85,37 @@ The Iris dataset contains 150 observations and 4 features.
 - Seaborn
 - Scikit-Learn
 - Pickle
+- Streamlit
 
 ---
 
-## ⚙️ Project Workflow
+# ⚙️ Machine Learning Workflow
 
-### 1. Data Loading
+## 1. Data Loading
+
 Load the Iris dataset using Scikit-Learn.
 
-### 2. Exploratory Data Analysis
+## 2. Exploratory Data Analysis (EDA)
+
 - Dataset Overview
+- Feature Analysis
 - Statistical Summary
 - Class Distribution
 
-### 3. Data Visualization
-- Boxplots
-- Scatterplots
+## 3. Data Visualization
+
+- Box Plots
+- Scatter Plots
 - Feature Relationships
 
-### 4. Data Preprocessing
-- Feature Selection
-- Train-Test Split
+## 4. Data Preprocessing
 
-### 5. Model Training
+- Feature Selection
+- Data Splitting
+- Data Validation
+
+## 5. Model Training
+
 A Decision Tree Classifier is used for classification.
 
 ```python
@@ -103,16 +127,19 @@ model = DecisionTreeClassifier(
 )
 ```
 
-### 6. Model Evaluation
+## 6. Model Evaluation
 
-The model performance is evaluated using:
+The model is evaluated using:
 
 - Accuracy Score
 - Confusion Matrix
 - Classification Report
+- Precision Score
+- Recall Score
+- F1 Score
 - ROC-AUC Score
 
-### 7. Model Saving
+## 7. Model Saving
 
 ```python
 import pickle
@@ -123,37 +150,45 @@ with open("iris.pkl", "wb") as file:
 
 ---
 
-## 🚀 How to Run
+# 📈 Model Features
 
-### Clone Repository
+- Fast Predictions
+- User-Friendly Interface
+- Real-Time Classification
+- Lightweight Deployment
+- High Accuracy Classification
+
+---
+
+# 🚀 How to Run Locally
+
+## Clone Repository
 
 ```bash
-git clone https://github.com/your-github-username/Iris-Flower-Classification.git
+git clone https://github.com/Prasanna99-rgb/Iris-Flower-Classification.git
 ```
 
-### Move to Project Directory
+## Navigate to Project Directory
 
 ```bash
 cd Iris-Flower-Classification
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run Jupyter Notebook
+## Run Streamlit Application
 
 ```bash
-jupyter notebook
+streamlit run app.py
 ```
-
-Open `Iris.ipynb` and run all cells.
 
 ---
 
-## 📦 Requirements
+# 📦 Requirements
 
 ```text
 numpy
@@ -161,34 +196,50 @@ pandas
 matplotlib
 seaborn
 scikit-learn
+streamlit
 jupyter
 ```
 
 ---
 
-## 🎯 Future Enhancements
+# 🎯 Future Improvements
 
 - Hyperparameter Tuning
 - Cross Validation
 - Random Forest Classifier
 - XGBoost Classifier
-- Streamlit Deployment
+- Model Monitoring
+- Cloud Deployment
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
-### Prasanna Deshmane
+## Prasanna Deshmane
+
+🔗 GitHub: https://github.com/Prasanna99-rgb
 
 🔗 LinkedIn: https://www.linkedin.com/in/prasanna-deshmane-80a419205
 
-🔗 GitHub: https://github.com/your-github-username
+🌐 Live Demo: https://mhm8lmnoncnkfyxvodpmis.streamlit.app/
 
 ---
 
-## ⭐ Support
+# 🤝 Contributing
 
-If you found this project useful, please consider giving it a ⭐ on GitHub.
+Contributions, issues, and feature requests are welcome.
+
+Feel free to fork this repository and submit pull requests.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please give it a ⭐ on GitHub.
+
+---
+
+## Made with ❤️ by Prasanna Deshmane
 
 ---
 Made with ❤️ using Python and Scikit-Learn
